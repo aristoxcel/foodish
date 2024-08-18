@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PiCirclesThreeBold } from "react-icons/pi";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const { user, logOut } = useContext(AuthContext);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -45,7 +47,7 @@ function Navbar() {
       </div>
 
 
-      {/* <div className="navbar-end text-teal-600  font-poet">
+      <div className="navbar-end text-teal-600  font-poet">
         {!user && <NavLink to={"/login"} className="hover:animate-bounce lg:px-7 px-3 border-2 rounded-xl lg:mr-4 mr-2  border-teal-600">Login</NavLink>}
        {
         user && (
@@ -80,7 +82,7 @@ function Navbar() {
           </button></>
         )
        }
-      </div> */}
+      </div>
 
 
     </div>
