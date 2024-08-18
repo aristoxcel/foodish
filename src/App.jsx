@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       </div>
       <div className="text-center lg:text-4xl text-2xl md:text-3xl font-bold text-amber-500">
         <h3>Please Login First</h3>
+        <Link to={"/login"}>Click Here</Link>
       </div>
       </div>
     </>
