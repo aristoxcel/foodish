@@ -15,9 +15,9 @@ function App() {
         <h2>To</h2>
         <h1>Foodish</h1>
       </div>
-      <div className="text-center lg:text-4xl text-2xl md:text-3xl font-bold text-amber-500">
+      <div className="text-center mt-8 lg:text-4xl text-2xl md:text-3xl font-bold text-amber-500 flex gap-4">
         <h3>Please Login First</h3>
-        <Link to={"/login"}>Click Here</Link>
+        <Link to={"/login"} className="text-blue-800 underline">Click Here</Link>
       </div>
       </div>
     </>
