@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import { Link,  useNavigate } from "react-router-dom"
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import toast from 'react-hot-toast';
@@ -8,10 +8,9 @@ import { AuthContext } from "../Providers/AuthProvider";
 
 function Login() {
   const navigate = useNavigate()
-  const location = useLocation()
   const { signIn, signInWithGoogle, user, loading, } = useContext(AuthContext)
 
-  const from = location.state || '/'
+  const from =  '/allItems'
 
 
   //  get token from server using email
